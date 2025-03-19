@@ -1,7 +1,11 @@
-import React from "react";
+import React from 'react'
 
 function App() {
-  return <div>DAvit</div>;
+  return (
+    <div>
+      <h1>hello React</h1>
+    </div>
+  )
 }
 
-export default App;
+export default App
