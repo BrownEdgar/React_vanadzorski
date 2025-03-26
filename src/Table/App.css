@@ -1,0 +1,84 @@
+:root {
+  --tr-border: 3px solid #2b3035;
+  --hover-bg: rgba(255, 255, 255, 0.075);
+}
+
+body {
+  background-color: #2b3035;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  color: #fff;
+
+}
+
+h1 {
+  text-align: center;
+}
+
+table {
+  margin: 50px auto;
+  text-align: left;
+  width: 900px;
+  border-collapse: collapse;
+  background-color: #343a40;
+}
+
+
+thead tr th {
+  border-bottom: 4px solid #2b3035
+}
+
+tr {
+  &:hover {
+    scale: 1.03;
+    transition: 0.2s;
+    background-color: var(--hover-bg);
+  }
+}
+
+th, td {
+  cursor: pointer;
+  border-bottom: var(--tr-border);
+  padding: 1em;
+  font-size: 18px;
+}
+
+.buttons {
+  display: flex;
+  padding: 1rem;
+  align-items: center;
+
+
+}
+
+button {
+  font-weight: 600;
+  border: 0;
+  border-radius: 4px;
+  font-size: 16px;
+  padding: 0.6rem 0.8rem;
+  cursor: pointer;
+  background-color: #ffa801;
+  color: #043946;
+
+  &.del {
+    background-color: crimson;
+    color: #fff;
+    padding: 12px 30px;
+    font-size: 14px;
+
+    &:hover {
+      background-color: #b60125;
+
+    }
+  }
+
+  &:hover {
+    background-color: #0add70;
+
+  }
+
+
+}
