@@ -28,8 +28,7 @@ export default function App() {
 
       </div>
       <div className="user">
-        {/* Պայմանով ենք նկարում, եթե user կա ընտրված նոր ցուցադրում է div-ը
-         */}
+        {/* Պայմանով ենք նկարում, եթե user կա ընտրված նոր ցուցադրում է div-ը */}
         {
           currentUser ? (
             <div>
