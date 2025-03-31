@@ -1,15 +1,13 @@
-import React from "react";
-import Posts from './components/Posts/Posts';
+import React from 'react'
+import Component from './Components/Component'
 
 function App() {
-
   return (
     <>
-      <h1>Our Posts</h1>
-      <Posts />
+      <h1>My Branch</h1>
+      <Component />
     </>
-
   )
 }
 
-export default App;
+export default App
