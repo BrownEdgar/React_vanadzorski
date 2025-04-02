@@ -1,5 +1,3 @@
-
-
 import React, { useContext } from "react";
 import C from './C';
 import { MyContext } from './Contexts';
