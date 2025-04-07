@@ -1,20 +1,23 @@
 import { useState } from 'react';
+import './Test.scss'
+import Child from './Child';
+
 
 function Test() {
-  const [data, setData] = useState([2, 3, 4]);
+  const [data, setData] = useState(
+    [25, 84, 69, 36, 54]
+  );
 
-  const handleChange = () => {
 
-    const copy = data.map((elem) => elem ** 2)
 
-    setData(copy)
+  const handleIndex = (n) => {
+    setData(data.toSpliced(n, 1, 68))
   }
 
   return (
     <div className='Test'>
-
-      <h1>Arr: {JSON.stringify(data)}</h1>
-      <button onClick={handleChange}>change Age</button>
+      <h1>{JSON.stringify(data)}</h1>
+      <Child handleIndex={handleIndex} />
     </div>
   );
 }

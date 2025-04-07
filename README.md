@@ -6,7 +6,7 @@
 3. git commit -m "your message here..."
 4. git push
 
-# react
+## react
 
 - useState փոփոխություններ
   {name: "Davit", age: 32}

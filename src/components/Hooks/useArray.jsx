@@ -19,9 +19,7 @@ function useArray({ count = 10, start = 1, end = 100, unique = false }) {
     }
   });
 
-
   const sort = (option = 'asc') => {
-
     (option === 'asc')
       ? setarr(arr.toSorted((a, b) => a - b))
       : setarr(arr.toSorted((a, b) => b - a))
