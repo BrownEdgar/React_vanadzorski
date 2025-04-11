@@ -1,0 +1,33 @@
+header {
+  background-color: #2d3436;
+  color: #00b894;
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+
+  .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 14px;
+  }
+
+  nav {
+    ul {
+      list-style: none;
+
+      li {
+        display: inline-block;
+        font-size: 20px;
+        cursor: pointer;
+
+        &:not(:last-child) {
+          color: rgb(255, 255, 255);
+          margin-right: 20px;
+        }
+      }
+    }
+  }
+}

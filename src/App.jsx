@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import Users from './components/Users/Users';
+import NavBar from './components/Navbar/NavBar';
 
 
 function App() {
@@ -11,6 +12,7 @@ function App() {
 
   return (
     <div className='App'>
+      <NavBar />
       <Users users={users} />
     </div>
 
