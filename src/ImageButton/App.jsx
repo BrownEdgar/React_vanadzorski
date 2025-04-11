@@ -12,20 +12,15 @@ export default function App() {
 
   const [currentUser, setcurrentUser] = useState(1);
 
-
-
-
   return <div className='App'>
     <h1 className='App__title'>Our USERS</h1>
     <div className="grid">
       <div className="buttons">
-
         {
           Object.keys(users).map((elem) => {
             return <button key={elem} className={currentUser === elem ? "active" : ""} onClick={() => setcurrentUser(elem)}> {users[elem].name}</button>
           })
         }
-
       </div>
       <div className="user">
         {/* Պայմանով ենք նկարում, եթե user կա ընտրված նոր ցուցադրում է div-ը */}
@@ -41,5 +36,7 @@ export default function App() {
         }
       </div>
     </div>
+    <hr />
+
   </div>;
 }

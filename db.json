@@ -1,0 +1,32 @@
+{
+  "cars": [
+    {
+      "id": "4",
+      "name": "🚒",
+      "color": "red",
+      "price": 35900,
+      "deletedAt": null
+    },
+    {
+      "id": "3",
+      "name": "🚑",
+      "color": "white",
+      "price": 18000,
+      "deletedAt": "2025-04-11T07:54:20.453Z"
+    },
+    {
+      "id": "2",
+      "name": "🚌",
+      "color": "yellow",
+      "price": 25800,
+      "deletedAt": null
+    },
+    {
+      "id": "21",
+      "name": "🚔",
+      "color": "black",
+      "price": 3200,
+      "deletedAt": null
+    }
+  ]
+}
