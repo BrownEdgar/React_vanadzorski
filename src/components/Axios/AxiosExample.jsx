@@ -12,14 +12,7 @@ function AxiosExample() {
   const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
-    // axios.get('https://jsonplaceholder.typicode.com/todos/', {
-    //   params: {
-    //     _limit: 12,
-    //     _start: 2
-    //   }
-    // })
-    //   .then(res => console.log(res.data))
-    instanse.get('cars?deletedAt=null')
+    instanse.get('cars')
       .then(res => {
         setCars(res.data)
       })
@@ -52,9 +45,21 @@ function AxiosExample() {
   const toggleOpen = () => {
     setIsOpen(!isOpen)
   }
+  const handleChange = (e) => {
+    instanse.get(`cars?color=${e.target.value}`)
+      .then(res => {
+        setCars(res.data)
+      })
 
+  }
   return (
     <div className="App">
+      <select name="colors" id="colors" onChange={handleChange}>
+        <option value="red">red</option>
+        <option value="white">white</option>
+        <option value="yellow">yellow</option>
+        <option value="black">black</option>
+      </select>
       <Cars cars={cars} handleDelete={handleDelete} />
       <hr />
       <button onClick={toggleOpen}>show archive <span>{archiveCars.length}</span></button>

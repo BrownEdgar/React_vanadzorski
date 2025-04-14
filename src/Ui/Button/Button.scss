@@ -1,0 +1,52 @@
+.Button {
+  font-weight: 600;
+  border: 0;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin: 12px 0;
+  position: relative;
+
+  &__success {
+    background-color: #4cd137;
+    border: 1px hidden #22ce0b;
+    color: #fff;
+  }
+  &__info {
+    background-color: #487eb0;
+    border: 1px hidden #5656dd;
+    color: #fff;
+  }
+  &__danger {
+    background-color: #ff3f34;
+    border: 1px hidden #ff0000;
+    color: #fff;
+  }
+  &__rounded {
+    border-radius: 2rem;
+  }
+  &__icon {
+    border-radius: 2rem;
+    position: relative;
+    display: inline-block;
+    left: 7px;
+    top: 1px;
+    padding-right: 7px;
+  }
+  &__small {
+    font-size: 0.875rem;
+    padding: 0.6rem 1rem;
+  }
+  &__normal {
+    padding: 0.75rem 1.25rem;
+    font-size: 1rem;
+  }
+  &__large {
+    font-size: 1.25rem;
+    padding: 0.85rem 1.35rem;
+  }
+  &__outlined {
+    background-color: transparent;
+    border-style: solid;
+  }
+}

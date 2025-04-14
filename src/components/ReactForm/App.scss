@@ -1,0 +1,24 @@
+.App {
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  align-items: center;
+  height: 400px;
+  flex-direction: column;
+  background-color: floralwhite;
+  border-radius: 12px;
+  &__item {
+    padding: 1rem 2rem;
+    background-color: #333;
+    color: #fff;
+  }
+  form {
+    input {
+      padding: 0.6rem;
+      margin: 10px;
+    }
+  }
+  h2 {
+    white-space: pre;
+  }
+}
