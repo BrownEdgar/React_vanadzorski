@@ -9,6 +9,7 @@ body {
   line-height: 1.6;
   max-width: 1440px;
   margin: 0 auto;
+  min-height: 1200px;
 }
 
 
@@ -38,3 +39,10 @@ a {
   color: #ecf0f1;
   position: relative;
 } */
+
+hr {
+  width: 50%;
+  margin: 24px auto;
+  border: 1px solid #111;
+
+}
