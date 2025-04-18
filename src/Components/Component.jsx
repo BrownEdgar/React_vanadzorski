@@ -1,11 +1,26 @@
-import React from 'react'
+import React, { Component } from 'react'
 
-function Component() {
+function Button({ variant, rounded, label, icon, size = "normal", onClick, outlined = false }) {
   return (
-    <div>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita, repudiandae!</p>
-    </div>
+    <button
+      className={`
+          Button 
+          Button__${variant} 
+          Button__${rounded ? "rounded" : ""} 
+          Button__${outlined ? "outlined" : ""} 
+          Button__${size}`
+      }
+      onClick={onClick || null}
+    >
+      {label}
+      <span className='Button__icon'>
+        {
+          icon ? <FontAwesomeIcon icon={icon} /> : null
+        }
+      </span>
+    </button>
   )
 }
+
 
 export default Component
