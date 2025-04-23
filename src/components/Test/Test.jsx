@@ -1,23 +1,28 @@
-import { useState } from 'react';
 import './Test.scss'
-import Child from './Child';
-
+import React, { useState, useEffect } from 'react';
 
 function Test() {
-  const [data, setData] = useState(
-    [25, 84, 69, 36, 54]
-  );
+  const [data, setdata] = useState([]);
 
-
-
-  const handleIndex = (n) => {
-    setData(data.toSpliced(n, 1, 68))
-  }
+  useEffect(() => {
+    fetch('https://jsonplaceholder.typicode.com/posts?_limit=5')
+      .then(res => res.json())
+      .then(x => setdata(x))
+  }, [])
 
   return (
     <div className='Test'>
-      <h1>{JSON.stringify(data)}</h1>
-      <Child handleIndex={handleIndex} />
+      {
+        data.map((elem) => {
+          return (
+            <div key={elem.id}>
+              <h2>{elem.title}</h2>
+              <p>{elem.body}</p>
+            </div>
+          )
+        })
+      }
+
     </div>
   );
 }
