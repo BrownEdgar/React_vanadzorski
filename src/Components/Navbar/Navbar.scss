@@ -1,0 +1,27 @@
+header {
+  height: 100px;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  width: 100%;
+  background-color: #1a1a1a;
+  color: #fff;
+  padding: 0 30px;
+  nav {
+    width: 450px;
+    padding-right: 50px;
+    ul {
+      text-align: right;
+      li {
+        display: inline-block;
+        margin-left: 20px;
+        font-size: 20px;
+        a {
+          &.active__link {
+            color: orange;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,15 +1,13 @@
 import React from 'react'
-import Posts from './components/Posts/Posts'
-import Counter from './components/Counter'
+import Navbar from './Components/Navbar/Navbar'
+import { Outlet } from 'react-router'
 
 function App() {
   return (
-    <>
-      <Counter />
-      <div>____________________________-</div>
-      <h1>Our Posts</h1>
-      <Posts />
-    </>
+    <div className='App'>
+      <Navbar />
+      <Outlet />
+    </div>
   )
 }
 

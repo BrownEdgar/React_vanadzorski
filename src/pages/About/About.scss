@@ -1,0 +1,19 @@
+.Posts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  & > div {
+    padding: 1rem;
+    border-radius: 12px;
+    background: #c9d42c;
+    background: linear-gradient(314deg, rgba(201, 212, 44, 1) 19%, rgba(149, 34, 195, 1) 19%);
+    color: #fff;
+    flex-basis: 45%;
+    h2 {
+      font-weight: 300;
+      margin-bottom: 10px;
+      line-height: 1.1;
+      text-transform: capitalize;
+    }
+  }
+}

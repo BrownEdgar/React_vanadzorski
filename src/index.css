@@ -12,9 +12,12 @@ body {
   min-height: 1200px;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  text-wrap: balance;
+}
 
-#root {
-  margin-top: 230px;
+p {
+  text-wrap: pretty;
 }
 
 ul {
