@@ -1,5 +1,5 @@
 import React from "react";
-import { useLoaderData } from 'react-router';
+import { Link, redirect, useLoaderData } from 'react-router';
 import './About.scss'
 function About() {
   const data = useLoaderData();
@@ -9,11 +9,10 @@ function About() {
     <h1>Posts</h1>
     <div className="Posts">
       {
-        data.map(elem => {
+        data?.map(elem => {
           return (
             <div key={elem.id}>
-              <h2>{elem.title}</h2>
-              <p>{elem.body}</p>
+              <Link to={`${elem.id}`}>{elem.title}</Link>
             </div>
           )
         })
@@ -23,7 +22,14 @@ function About() {
 }
 
 export const fetchData = async () => {
-  const response = await fetch('https://jsonplaceholder.typicode.com/posts?_limit=12');
+  const isLogin = !!localStorage.getItem('login')
+  console.log(isLogin);
+
+  if (!isLogin) {
+    return redirect('/sign-in');
+  }
+
+  const response = await fetch('https://jsonplaceholder.typicode.com/posts');
   const data = await response.json()
   return data
 }

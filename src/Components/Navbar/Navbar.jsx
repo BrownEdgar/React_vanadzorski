@@ -1,8 +1,9 @@
 import React from "react";
 import './Navbar.scss'
-import { Link, NavLink } from 'react-router';
+import { NavLink, useNavigate } from 'react-router';
 
-export default function Navbar() {
+export default function Navbar({ login }) {
+  const navigate = useNavigate()
   return (
     <header>
       <nav>
@@ -13,9 +14,9 @@ export default function Navbar() {
             }>Home</NavLink>
           </li>
           <li>
-            <NavLink to="/about" className={
+            <NavLink to="/posts" className={
               ({ isActive }) => isActive ? "active__link" : ""
-            }>About</NavLink>
+            }>Posts</NavLink>
           </li>
           <li>
             <NavLink to="/blog" className={
@@ -27,7 +28,21 @@ export default function Navbar() {
               ({ isActive }) => isActive ? "active__link" : ""
             }>Contuct Us</NavLink>
           </li>
+          <li>
 
+            {
+              login ? (
+                <button onClick={() => {
+                  localStorage.clear()
+                  navigate('/')
+                }}>Sign Out</button>
+              ) : (
+                <NavLink to="/sign-in" className={
+                  ({ isActive }) => isActive ? "active__link" : ""
+                }>Sign in</NavLink>
+              )
+            }
+          </li>
         </ul>
       </nav>
     </header>
