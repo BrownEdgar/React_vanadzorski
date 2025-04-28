@@ -1,6 +1,7 @@
 import React from "react";
 import './Navbar.scss'
 import { NavLink, useNavigate } from 'react-router';
+import ROUTES from '../../routes';
 
 export default function Navbar({ login }) {
   const navigate = useNavigate()
@@ -9,22 +10,22 @@ export default function Navbar({ login }) {
       <nav>
         <ul>
           <li>
-            <NavLink to="/" className={
+            <NavLink to={ROUTES.HOME} className={
               ({ isActive }) => isActive ? "active__link" : ""
             }>Home</NavLink>
           </li>
           <li>
-            <NavLink to="/posts" className={
+            <NavLink to={ROUTES.POSTS} className={
               ({ isActive }) => isActive ? "active__link" : ""
             }>Posts</NavLink>
           </li>
           <li>
-            <NavLink to="/blog" className={
+            <NavLink to={ROUTES.BLOG} className={
               ({ isActive }) => isActive ? "active__link" : ""
             }>Blog</NavLink>
           </li>
           <li>
-            <NavLink to="/contact-us" className={
+            <NavLink to={ROUTES.CONTACT_US} className={
               ({ isActive }) => isActive ? "active__link" : ""
             }>Contuct Us</NavLink>
           </li>
@@ -34,10 +35,10 @@ export default function Navbar({ login }) {
               login ? (
                 <button onClick={() => {
                   localStorage.clear()
-                  navigate('/')
+                  navigate(ROUTES.HOME)
                 }}>Sign Out</button>
               ) : (
-                <NavLink to="/sign-in" className={
+                <NavLink to={ROUTES.SIGNIN} className={
                   ({ isActive }) => isActive ? "active__link" : ""
                 }>Sign in</NavLink>
               )

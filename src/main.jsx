@@ -5,29 +5,22 @@ import {
 } from "react-router";
 import App from './App'
 import './index.css'
-import About, { fetchData } from './pages/About/About';
-import Blog from './pages/Blog/Blog';
-import Home from './pages/Home/Home';
-import Contactus from "./pages/ContactUs/Contact"
-import ErrorPage from './pages/404/ErrorPage';
-import Post from './pages/Post/Post';
-import SignIn from './pages/SignIn/SignIn';
+import { Blog, ContactUs, ErrorPage, Home, Post, Posts, SignIn } from './pages';
+import ROUTES from './routes';
 
-const checkLogin = () => {
 
-}
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: ROUTES.HOME,
     element: <App />,
     children: [
       { index: true, element: <Home /> },
-      { path: 'posts', element: <About />, loader: fetchData },
-      { path: 'posts/:id', element: <Post />, loader: checkLogin },
-      { path: 'blog', element: <Blog /> },
-      { path: 'contact-us', element: <Contactus /> },
-      { path: 'sign-in', element: <SignIn /> },
+      { path: ROUTES.POSTS, element: <Posts />, },
+      { path: ROUTES.SPECIAL_POST, element: <Post />, },
+      { path: ROUTES.BLOG, element: <Blog /> },
+      { path: ROUTES.CONTACT_US, element: <ContactUs /> },
+      { path: ROUTES.SIGNIN, element: <SignIn /> },
       { path: '*', element: <ErrorPage /> },
     ]
   },
