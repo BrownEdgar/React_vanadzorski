@@ -2,41 +2,51 @@ import React, { useEffect, useState } from "react";
 import { Link, redirect, useLoaderData } from 'react-router';
 import './About.scss'
 import axios from 'axios';
+
+
 import Pagination from '../../Components/Pagination/Pagination';
 function About() {
   const [data, setdata] = useState([]);
   const [page, setPage] = useState(2);
-  const [perPage, setPerPage] = useState(1);
+  const [perPage, setPerPage] = useState(10);
+  const [isLoading, setisLoading] = useState(false);
+
 
 
 
   useEffect(() => {
+    setisLoading(true)
     axios.get('https://jsonplaceholder.typicode.com/posts', {
       params: {
         _limit: perPage,
         _start: (page * perPage) - perPage
       }
-    }).then(res => setdata(res.data))
+    })
+      .then(res => setdata(res.data))
+      .finally(() => setisLoading(false))
   }, [page]);
 
+  const handlePageClick = ({ selected }) => {
+    setPage(selected + 1)
 
+  }
 
-  return <div>
+  return <div className='main_flex'>
     <h1>Posts</h1>
-    <div className="Posts">
+    <div className={`Posts ${isLoading ? "Posts__loading" : ""}`}>
       {
         data?.map(elem => {
           return (
             <div key={elem.id}>
-
-              <Link to={`${elem.id}`}>{elem.title}</Link>
               <span>{elem.id}</span>
+              <Link to={`${elem.id}`}>{elem.title}</Link>
             </div>
           )
         })
       }
     </div>
-    <Pagination perPage={perPage} total={100} setPage={setPage} page={page} />
+    <Pagination perPage={perPage} total={100} handlePageClick={handlePageClick} />
+
   </div>;
 }
 

@@ -1,20 +1,109 @@
 .Posts {
   display: flex;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
   flex-wrap: wrap;
   gap: 30px;
-  height: 650px;
+
+  position: relative;
+  &__loading {
+    & > div {
+      filter: blur(5px);
+    }
+    &::before {
+      content: '';
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+      border-radius: 12px;
+      background: rgba($color: #847575, $alpha: 0.1);
+    }
+    &::after {
+      content: '';
+      width: 70px;
+      padding: 1rem;
+      height: 70px;
+      border-radius: 50%;
+      animation: loader 550ms infinite linear both;
+      border: 10px solid #e1353d;
+      border-left-color: transparent;
+      left: calc(50% - 35px);
+      top: calc(50% - 35px);
+
+      position: absolute;
+    }
+  }
   & > div {
     padding: 1rem;
     border-radius: 12px;
     background: #c9d42c;
-    background: linear-gradient(314deg, rgba(201, 212, 44, 1) 19%, rgba(149, 34, 195, 1) 19%);
+    background: #2a7b9b;
+    background: linear-gradient(90deg, rgba(42, 123, 155, 1) 0%, rgba(87, 199, 133, 1) 50%, rgba(237, 221, 83, 1) 100%);
     color: #fff;
     flex-basis: 45%;
+    flex-grow: 1;
+
+    position: relative;
     h2 {
       font-weight: 300;
       margin-bottom: 10px;
       line-height: 1.1;
+
       text-transform: capitalize;
     }
+    a {
+      font-size: 22px;
+      overflow: hidden;
+      width: 90%;
+      display: inline-block;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+    span {
+      font-weight: 500;
+      font-size: 20px;
+      position: absolute;
+      width: 40px;
+      text-align: center;
+      padding: 4px;
+      height: 40px;
+      display: block;
+      border-radius: 50%;
+      top: -15px;
+      left: -15px;
+      background-color: rgb(61, 7, 239);
+      color: #fff;
+    }
+  }
+}
+
+.main_flex {
+  display: grid;
+  height: calc(100vh - 120px);
+  grid-template-rows: 120px 1fr 100px;
+  gap: 12px;
+  h1 {
+    text-align: center;
+    font-size: 5em;
+    color: #070e51;
+    font-family: 'Luckiest Guy';
+    letter-spacing: 3px;
+    text-shadow: 3px 3px 1px #ff0000, 4px 4px 0px #000;
+  }
+}
+
+@keyframes loader {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  50% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(360deg);
   }
 }

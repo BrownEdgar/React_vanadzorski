@@ -1,25 +1,25 @@
 import React from "react";
 import './Pagination.css'
-function Pagination({ total, perPage, setPage, page }) {
+import ReactPaginate from 'react-paginate';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faAdd } from '@fortawesome/free-solid-svg-icons/faAdd';
+import { faArrowAltCircleRight, faMinus } from '@fortawesome/free-solid-svg-icons';
+import { faArrowAltCircleLeft } from '@fortawesome/free-solid-svg-icons/faArrowAltCircleLeft';
+function Pagination({ total, perPage, handlePageClick }) {
 
-  const arr = []
-  for (let i = 0; i < Math.ceil(total / perPage); i++) {
-    arr.push(i + 1)
-  }
 
 
   return <div className='Pagination'>
-    <ul>
-      {
-        arr.map(n => <li
-          key={n}
-          onClick={() => setPage(n)}
-          className={`${page === n ? "active" : ''} `}
-        >
-          {n}
-        </li>)
-      }
-    </ul>
+    <ReactPaginate
+      breakLabel="..."
+      nextLabel={<FontAwesomeIcon icon={faArrowAltCircleRight} />}
+      onPageChange={handlePageClick}
+      pageRangeDisplayed={5}
+      pageCount={Math.ceil(total / perPage)}
+      previousLabel={<FontAwesomeIcon icon={faArrowAltCircleLeft} />}
+      renderOnZeroPageCount={null}
+      activeClassName="active"
+    />
 
   </div>;
 }
