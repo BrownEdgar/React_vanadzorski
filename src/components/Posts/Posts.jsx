@@ -1,33 +1,29 @@
-import React, { useState, useEffect } from "react";
-import './Posts.css'
-import Post from '../Post/Post';
+import axios from 'axios';
+import React, { useEffect } from "react";
+import { useDispatch, useSelector } from 'react-redux';
+import { savePosts } from '../../features/posts/postsSlice';
 
 function Posts() {
-  const [posts, setPosts] = useState([]);
 
-  const [currentPost, setcurrentPost] = useState(1)
-
+  const posts = useSelector((state) => state.posts)
+  const dispatch = useDispatch()
 
   useEffect(() => {
-    async function fetchData() {
-      const response = await fetch('https://jsonplaceholder.typicode.com/posts?_limit=30')
-      const data = await response.json()
-      setPosts(data)
-    }
-    fetchData()
-  }, [])
+    axios.get('https://jsonplaceholder.typicode.com/posts')
+      .then(res => dispatch(savePosts(res.data)))
+  }, [dispatch]);
 
 
-  return <div>
-    <h1>Posts {currentPost}</h1>
-    <button onClick={() => setcurrentPost(currentPost + 1)}>change</button>
-    {
-      posts.map((elem) => {
-        return (
-          <Post elem={elem} key={elem.id} />
-        )
-      })
-    }
+
+  return <div className='Posts'>
+    {posts.map(elem => {
+      return (
+        <div className="Posts__item" key={elem.id}>
+          <h2>{elem.title}</h2>
+          <p>{elem.body}</p>
+        </div>
+      )
+    })}
   </div>;
 }
 
