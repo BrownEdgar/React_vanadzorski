@@ -1,6 +1,9 @@
 import React, { useEffect } from "react";
 import './Modal.scss'
-function Modal({ toggleModal, deletItem }) {
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faXmark } from '@fortawesome/free-solid-svg-icons';
+
+function Modal({ toggleModal, children, icon, theme = 'light' }) {
 
   useEffect(() => {
     const handleClick = (e) => {
@@ -18,13 +21,11 @@ function Modal({ toggleModal, deletItem }) {
 
 
   return <div className='Modal'>
-    <div className="Modal__content">
-      <h1>Are you sure??</h1>
-      <button onClick={toggleModal}>Close</button>
-      <button onClick={() => {
-        deletItem()
-        toggleModal()
-      }}> YES! delete</button>
+    <div className={`Modal__content Modal__content-${theme}`}>
+      {icon && <button className="Modal__close" onClick={() => toggleModal(false)}>
+        <FontAwesomeIcon icon={faXmark} />
+      </button>}
+      {children}
     </div>
   </div>;
 }

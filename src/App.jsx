@@ -1,15 +1,25 @@
-import React from 'react'
-import Posts from './components/Posts/Posts'
-import Counter from './components/Counter'
+import React, { useState } from 'react'
 
 function App() {
+  const [data, setdata] = useState([
+    {
+      id: 1,
+      name: "Ani"
+    },
+    {
+      id: 2,
+      name: "Karen"
+    },
+    {
+      id: 3,
+      name: "Garik"
+    },
+  ]);
+
   return (
-    <>
-      <Counter />
-      <div>____________________________-</div>
-      <h1>Our Posts</h1>
-      <Posts />
-    </>
+    <div>
+
+    </div>
   )
 }
 

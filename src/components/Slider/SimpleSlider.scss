@@ -1,0 +1,41 @@
+.slick {
+  &-list {
+    width: 1200px;
+
+    margin: 0 auto;
+    background-color: #131321;
+    color: #fff;
+  }
+  &-slide {
+    position: relative;
+
+    img {
+      max-width: 100%;
+      transition: 0.2s;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+  &-arrow {
+    &::before {
+      background-color: #111;
+      padding: 4px;
+    }
+  }
+  &-prev {
+    & > button {
+      background-color: transparent;
+      padding: 0.3rem;
+      cursor: pointer;
+    }
+    &::before {
+      content: '';
+      padding: 0;
+    }
+  }
+  &-center {
+    img {
+      padding: 50px;
+    }
+  }
+}
