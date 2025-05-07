@@ -1,0 +1,47 @@
+{
+  "twetts": [
+    {
+      "id": 1,
+      "name": "Bri",
+      "username": "BriDehlinger",
+      "image": "./images/photo2.png",
+      "description": "It’ s difficult to make a tool that is powerful, easy video to use, and stays out of the way. expo has student figured it out and it’s one of the most and they want to pleasurable dev experiences I’ve had in my seen that career goal."
+    },
+    {
+      "id": 2,
+      "name": "Bri",
+      "username": "BriDehlinger",
+      "image": "./images/photo.png",
+      "description": "It’ s difficult to make a tool that is powerful, easy video to use, and stays out of the way. expo has student figured it out and it’s one of the most and they want to pleasurable dev experiences I’ve had in my seen that career goal."
+    },
+    {
+      "id": 3,
+      "name": "Bri",
+      "username": "BriDehlinger",
+      "image": "./images/photo2.png",
+      "description": "It’ s difficult to make a tool that is powerful, easy video to use, and stays out of the way. expo has student figured it out and it’s one of the most and they want to pleasurable dev experiences I’ve had in my seen that career goal."
+    },
+    {
+      "id": 4,
+      "name": "Bri",
+      "username": "BriDehlinger",
+      "image": "./images/photo.png",
+      "description": "It’ s difficult to make a tool that is powerful, easy video to use, and stays out of the way. expo has student figured it out and it’s one of the most and they want to pleasurable dev experiences I’ve had in my seen that career goal."
+    },
+    {
+      "id": 5,
+      "name": "CarolMcKeon",
+      "username": "LisaMillerCool",
+      "image": "./images/photo2.png",
+      "description": "It’ s difficult to make a tool that is powerful, easy video to use, and stays out of the way. expo has student figured it out and it’s one of the most and they want to pleasurable dev experiences I’ve had in my seen that career goal.",
+      "extradescription": "It’s difficult to make a tool that is powerful, easy video to use,and stays out of the way. @expo has student figured it out."
+    },
+    {
+      "id": 6,
+      "name": "Bri",
+      "username": "BriDehlinger",
+      "image": "./images/photo.png",
+      "description": "It’ s difficult to make a tool that is powerful, easy video to use, and stays out of the way. expo has student figured it out and it’s one of the most and they want to pleasurable dev experiences I’ve had in my seen that career goal."
+    }
+  ]
+}
