@@ -1,29 +1,20 @@
-import axios from 'axios'
-import React, { useEffect } from 'react'
-import { useDispatch, useSelector } from 'react-redux'
-import { savePosts } from '../../features/posts/postsSlice'
+import { useDispatch, useSelector } from 'react-redux';
+import { addUser } from '../../features/users/usersSlice';
+
 
 function Users() {
-  const users = useSelector((state) => state.posts)
+  const users = useSelector((state) => state.users)
   const dispatch = useDispatch()
 
-  useEffect(() => {
-    axios.get('https://jsonplaceholder.typicode.com/users').then((res) => dispatch(savePosts(res.data)))
-  }, [dispatch])
-const btn = handleclick()
-  return (
-    <div className="Users">
-      {users.map((elem) => {
-        return (
-          <div className="Users__item" key={elem.id}>
-            <h2>{elem.title}</h2>
-            <p>{elem.body}</p>
-            <button onClick= {handleclick} ></button>
-          </div>
-        )
-      })}
-    </div>
-  )
+  const handleClick = () => {
+    dispatch(addUser("Karen"))
+  }
+
+  return <div className='Users'>
+    <h1>Our Users</h1>
+    <h2>{JSON.stringify(users)}</h2>
+    <button onClick={handleClick}>add user</button>
+  </div>;
 }
 
-export default Users
+export default Users;
