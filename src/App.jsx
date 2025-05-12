@@ -1,6 +1,6 @@
 import './App.css'
-import React from "react";
 import Twetts from './components/Twetts/Twetts';
+
 
 function App() {
   return (
