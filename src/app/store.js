@@ -7,7 +7,7 @@ import twettsSlice from "../features/twetts/twettsSlice";
 const myMiddleware = (store) => (next) => (action) => {
   // Ստանում է արդի "պահեստի" պարունակությունը 
   // store.getstate()
-  console.log("action:", action);
+
 
   if (action.type === 'twetts/saveTwett/pending') {
     console.log(store.getState());
@@ -24,6 +24,7 @@ const myMiddleware = (store) => (next) => (action) => {
   }
   next(action)
 }
+
 
 const store = configureStore({
   reducer: {

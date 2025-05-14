@@ -1,17 +1,19 @@
 
 import './Twetts.scss'
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import { useDispatch, useSelector } from 'react-redux';
-import { deleteTwettById, getAsyncTwetts, saveTwett } from '../../features/twetts/twettsSlice';
+import { deleteTwettById, getAllTwetts, getAsyncTwetts, } from '../../features/twetts/twettsSlice';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTwitter } from '@fortawesome/free-brands-svg-icons';
-import axios from 'axios';
+
+import { getCurrentCounter } from '../../features/counter/counterSlice';
+import AddForm from '../AddForm/AddForm';
+
 
 function Twetts() {
-  const twetts = useSelector((state) => state.tweets)
-  const counter = useSelector((state) => state.counter)
+  const twetts = useSelector((state) => getAllTwetts(state))
+  const counter = useSelector(getCurrentCounter)
   const dispatch = useDispatch()
-
 
   useEffect(() => {
     dispatch(getAsyncTwetts())
@@ -25,22 +27,6 @@ function Twetts() {
     return <h1>{twetts.error}</h1>
   }
 
-  const handleSubmit = (e) => {
-    e.preventDefault()
-    const formdata = new FormData(e.target)
-    const user = Object.fromEntries(formdata);
-    user.id = Math.round(Math.random() * 1e5)
-    user.image = './images/photo2.png'
-    // dispatch(saveTwett(user))
-
-    const x = twetts.data.some(elem => elem.username.toLowerCase() === user.username.toLowerCase())
-    if (!x) {
-      axios.post(import.meta.env.VITE_DB_URL, user)
-        .then(res => console.log(res))
-    } else {
-      alert("userExist")
-    }
-  }
 
   return (
     <div className='Twetts'>
@@ -48,13 +34,7 @@ function Twetts() {
         <p>Over 2000 businesses, marketers and creatives use Suparise to grow their Instagram.</p>
         <h1>Don’t just take our word for it {counter}</h1>
       </div>
-      <form onSubmit={handleSubmit}>
-        <input type="text" id='name' name='name' placeholder='name' />
-        <input type="text" id='username' name='username' placeholder='username' />
-        <textarea name="description" id="description" placeholder='description' rows={6}></textarea>
-        <input type="submit" value="save" />
-      </form>
-
+      <AddForm />
       <div className="Twetts__blog">
         {twetts.data.map(elem => {
           return (

@@ -11,10 +11,14 @@ const counterSlice = createSlice({
     minus(state) {
       return state - 1
     }
+  },
+  selectors: {
+    getCurrentCounter: (state) => state
   }
 })
 
 export const { plus, minus } = counterSlice.actions
+export const { getCurrentCounter } = counterSlice.selectors
 
 export default counterSlice.reducer;
 

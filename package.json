@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "server": "concurrently \"vite\" \"npx json-server db.json --port 5000\"",
     "lint": "eslint .",
     "preview": "vite preview"
   },
@@ -16,6 +17,7 @@
     "@fortawesome/react-fontawesome": "^0.2.2",
     "@reduxjs/toolkit": "^2.7.0",
     "axios": "^1.8.4",
+    "concurrently": "^9.1.2",
     "json-server": "^1.0.0-beta.3",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",

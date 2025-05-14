@@ -8,14 +8,12 @@ export const getAsyncTwetts = createAsyncThunk('twetts/getAsyncTwetts', async ()
 })
 
 export const saveTwett = createAsyncThunk('twetts/saveTwett', async (user) => {
-
-
   const response = await axios.post(import.meta.env.VITE_DB_URL, user);
   return response.data
 })
 
 const twettsSlice = createSlice({
-  name: "twetts",
+  name: "tweets",
   initialState: {
     data: [],
     loading: false
@@ -37,18 +35,26 @@ const twettsSlice = createSlice({
         }
       })
       .addCase(saveTwett.rejected, (_, action) => {
-        console.log(action);
-
         return {
           data: [],
           loading: false,
           error: action.error.message
         }
       })
+  },
+  selectors: {
+    getAllTwetts: (state, name = "") => {
+      if (name) {
+        const data = state.data.filter(elem => elem.name === name)
+        return { ...state, data }
+      }
+      return state
+    }
   }
 })
 
 export const { deleteTwettById } = twettsSlice.actions
+export const { getAllTwetts } = twettsSlice.selectors
 
 export default twettsSlice.reducer;
 
