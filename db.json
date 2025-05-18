@@ -44,24 +44,31 @@
       "description": "It’ s difficult to make a tool that is powerful, easy video to use, and stays out of the way. expo has student figured it out and it’s one of the most and they want to pleasurable dev experiences I’ve had in my seen that career goal."
     },
     {
-      "id": 60853,
+      "id": "60853",
       "name": "Vardan",
       "username": "@vardan25",
       "description": "It’ s difficult to make a tool that is powerful, easy video to use, and stays out of the way. expo has student figured it out and it’s one of the most and they want to pleasurable dev experiences I’ve had in my seen that career goal.",
       "image": "./images/photo2.png"
     },
     {
-      "id": 52254,
+      "id": "52254",
       "name": "dsadsa",
       "username": "dsadsa",
       "description": "dadsa",
       "image": "./images/photo2.png"
     },
     {
-      "id": 9197,
+      "id": "9197",
       "name": "dasda",
       "username": "dasdsa",
       "description": "dasdas",
+      "image": "./images/photo2.png"
+    },
+    {
+      "id": 53620,
+      "name": "",
+      "username": "",
+      "description": "",
       "image": "./images/photo2.png"
     }
   ]
