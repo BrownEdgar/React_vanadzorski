@@ -1,7 +1,7 @@
 .Title {
   font-family: 'Cabin Sketch', sans-serif;
   font-size: 5em;
-  text-align: center;
+  text-align: left;
   font-style: normal;
   background-color: #1a1a1a;
   color: crimson;
@@ -10,7 +10,8 @@
   left: 0;
   top: 0;
   width: 100%;
-  clip-path: polygon(50% 0%, 100% 0, 90% 100%, 8% 100%, 0 0);
+  // clip-path: polygon(50% 0%, 100% 0, 90% 100%, 8% 100%, 0 0);
+  clip-path: polygon(0 0, 100% 0, 100% 70%, 0% 100%);
 
   &::after {
     content: ' :)';
