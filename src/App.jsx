@@ -1,26 +1,13 @@
-import React, { useState } from 'react'
+import './App.scss';
+import Posts from '@c/Posts/Posts';
 
 function App() {
-  const [data, setdata] = useState([
-    {
-      id: 1,
-      name: "Ani"
-    },
-    {
-      id: 2,
-      name: "Karen"
-    },
-    {
-      id: 3,
-      name: "Garik"
-    },
-  ]);
-
   return (
-    <div>
-
+    <div className="App">
+      <h1>App Page</h1>
+      <Posts />
     </div>
-  )
+  );
 }
 
-export default App
+export default App;

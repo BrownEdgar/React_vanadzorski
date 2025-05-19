@@ -1,0 +1,14 @@
+@use './variablies' as v;
+* {
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0 auto;
+  max-width: v.$body-width;
+  line-height: 1.5;
+  font-optical-sizing: auto;
+  font-family: v.$main-font-family;
+  font-style: normal;
+}

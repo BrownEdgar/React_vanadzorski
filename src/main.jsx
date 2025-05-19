@@ -1,14 +1,12 @@
-import { createRoot } from 'react-dom/client'
-import './index.css'
-import App from './Components/Hooks/useLEyoutEffect/App'
-import { ErrorBoundary } from 'react-error-boundary'
+import App from './App.jsx';
+import store from './app/store';
+import { createRoot } from 'react-dom/client';
+import { Provider } from 'react-redux';
 
-import Fallback from './components/ErrorBoundary/Fallback'
-
-
+import './index.scss';
 
 createRoot(document.getElementById('root')).render(
-  <ErrorBoundary FallbackComponent={Fallback}>
+  <Provider store={store}>
     <App />
-  </ErrorBoundary>
-)
+  </Provider>
+);
