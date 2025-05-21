@@ -3,7 +3,7 @@ import productSlice from '@f/products/productsSlice';
 
 const store = configureStore({
   reducer: {
-    products: productSlice,
+    actions: productSlice,
   },
 });
 

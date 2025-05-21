@@ -1,1 +1,60 @@
-{}
+{
+  "actions": [
+    {
+      "id": 1,
+      "currentBid": 0.85,
+      "creators": "Esther Howard",
+      "title": "3D Soft Curves",
+      "image": "/images/line.png",
+      "date": "2025-05-21T14:15:12.356Z"
+    },
+    {
+      "id": 2,
+      "currentBid": 0.24,
+      "creators": "Jenny Wilson",
+      "title": "The mystery of the black square",
+      "image": "/images/cube.png",
+      "date": "2025-05-21T14:15:12.356Z"
+    },
+    {
+      "id": 3,
+      "currentBid": 0.85,
+      "creators": "Esther Howard",
+      "title": "Pink Cloud 🌥",
+      "image": "/images/line.png",
+      "date": "2025-05-21T14:15:12.356Z"
+    },
+    {
+      "id": 4,
+      "currentBid": 0.24,
+      "creators": "Jenny Wilson",
+      "title": "The mystery of the black square",
+      "image": "/images/cube.png",
+      "date": "2025-05-21T14:15:12.356Z"
+    },
+    {
+      "id": 5,
+      "currentBid": 0.24,
+      "creators": "Jenny Wilson",
+      "title": "The mystery of the black square",
+      "image": "/images/cube.png",
+      "date": "2025-05-21T14:15:12.356Z"
+    },
+    {
+      "id": 6,
+      "currentBid": 0.24,
+      "creators": "Jenny Wilson",
+      "title": "The mystery of the black square",
+      "image": "/images/cube.png",
+      "date": "2025-05-21T14:15:12.356Z"
+    }
+  ],
+  "creators": [
+    {
+      "id": 1,
+      "fullName": "Tung Tran",
+      "tags": "Bad Artist, NFT Enthusiast, Metaverse Innovator",
+      "followers": 3600
+    }
+  ]
+}

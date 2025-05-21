@@ -1,1 +1,7 @@
-@use './sass/reset';
+@use './sass/globals/reset';
+@use './sass/globals/variablies' as v;
+
+.container {
+  max-width: v.$container-width;
+  margin: 45px auto;
+}

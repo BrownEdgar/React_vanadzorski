@@ -1,0 +1,19 @@
+.Row {
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    a {
+      color: #8e8e93;
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 28px;
+    }
+  }
+  &__flex {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 36px 32px;
+    margin-top: 36px;
+  }
+}

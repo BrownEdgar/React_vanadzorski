@@ -1,11 +1,12 @@
-import './App.scss';
-import Posts from '@c/Posts/Posts';
+import { Outlet } from 'react-router';
+import './sass/App.scss';
+import Navbar from './components/Navbar/Navbar';
 
 function App() {
   return (
     <div className="App">
-      <h1>App Page</h1>
-      <Posts />
+      <Navbar />
+      <Outlet />
     </div>
   );
 }
