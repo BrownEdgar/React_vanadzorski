@@ -18,6 +18,15 @@ const productSlice = createSlice({
       return action.payload;
     });
   },
+  selectors: {
+    getActionById(state) {
+      console.log(state);
+      return state
+
+    }
+  }
 });
+
+export const { getActionById } = productSlice.selectors
 
 export default productSlice.reducer;

@@ -1,0 +1,12 @@
+.CreatorsCard {
+  min-width: 312px;
+  height: 434px;
+  border-radius: 12px 12px 0 0;
+  overflow: hidden;
+  border: 1.5px solid #e5e5e5;
+  &__image {
+    height: 160px;
+    width: 100%;
+    object-fit: cover;
+  }
+}

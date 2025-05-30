@@ -4,22 +4,25 @@
       "id": 1,
       "currentBid": 0.85,
       "creators": "Esther Howard",
+      "description": "3D Soft Curves is a mesmerizing digital artwork that plays with light and shadow, creating a soft, flowing aesthetic that captivates the viewer. This piece is a testament to the beauty of simplicity and the power of digital art to evoke emotion and wonder. It invites the audience to explore the interplay of curves and light, making it a perfect addition to any modern art collection.",
       "title": "3D Soft Curves",
       "image": "/images/line.png",
-      "date": "2025-05-21T14:15:12.356Z"
+      "date": "2025-05-24T14:15:12.356Z"
     },
     {
       "id": 2,
       "currentBid": 0.24,
       "creators": "Jenny Wilson",
+      "description": "3D Soft Curves is a mesmerizing digital artwork that plays with light and shadow, creating a soft, flowing aesthetic that captivates the viewer. This piece is a testament to the beauty of simplicity and the power of digital art to evoke emotion and wonder. It invites the audience to explore the interplay of curves and light, making it a perfect addition to any modern art collection.",
       "title": "The mystery of the black square",
       "image": "/images/cube.png",
-      "date": "2025-05-21T14:15:12.356Z"
+      "date": "2025-05-23T16:15:12.356Z"
     },
     {
       "id": 3,
       "currentBid": 0.85,
       "creators": "Esther Howard",
+      "description": "3D Soft Curves is a mesmerizing digital artwork that plays with light and shadow, creating a soft, flowing aesthetic that captivates the viewer. This piece is a testament to the beauty of simplicity and the power of digital art to evoke emotion and wonder. It invites the audience to explore the interplay of curves and light, making it a perfect addition to any modern art collection.",
       "title": "Pink Cloud 🌥",
       "image": "/images/line.png",
       "date": "2025-05-21T14:15:12.356Z"
@@ -28,6 +31,7 @@
       "id": 4,
       "currentBid": 0.24,
       "creators": "Jenny Wilson",
+      "description": "3D Soft Curves is a mesmerizing digital artwork that plays with light and shadow, creating a soft, flowing aesthetic that captivates the viewer. This piece is a testament to the beauty of simplicity and the power of digital art to evoke emotion and wonder. It invites the audience to explore the interplay of curves and light, making it a perfect addition to any modern art collection.",
       "title": "The mystery of the black square",
       "image": "/images/cube.png",
       "date": "2025-05-21T14:15:12.356Z"
@@ -36,6 +40,7 @@
       "id": 5,
       "currentBid": 0.24,
       "creators": "Jenny Wilson",
+      "description": "3D Soft Curves is a mesmerizing digital artwork that plays with light and shadow, creating a soft, flowing aesthetic that captivates the viewer. This piece is a testament to the beauty of simplicity and the power of digital art to evoke emotion and wonder. It invites the audience to explore the interplay of curves and light, making it a perfect addition to any modern art collection.",
       "title": "The mystery of the black square",
       "image": "/images/cube.png",
       "date": "2025-05-21T14:15:12.356Z"
@@ -44,9 +49,54 @@
       "id": 6,
       "currentBid": 0.24,
       "creators": "Jenny Wilson",
+      "description": "3D Soft Curves is a mesmerizing digital artwork that plays with light and shadow, creating a soft, flowing aesthetic that captivates the viewer. This piece is a testament to the beauty of simplicity and the power of digital art to evoke emotion and wonder. It invites the audience to explore the interplay of curves and light, making it a perfect addition to any modern art collection.",
       "title": "The mystery of the black square",
       "image": "/images/cube.png",
       "date": "2025-05-21T14:15:12.356Z"
+    }
+  ],
+  "fetured": [
+    {
+      "id": 1,
+      "currentBid": 0.85,
+      "creators": "Esther Howard",
+      "title": "3D Soft Curves",
+      "image": "/images/line.png"
+    },
+    {
+      "id": 2,
+      "currentBid": 0.24,
+      "creators": "Jenny Wilson",
+      "title": "The mystery of the black square",
+      "image": "/images/cube.png"
+    },
+    {
+      "id": 3,
+      "currentBid": 0.85,
+      "creators": "Esther Howard",
+      "title": "Pink Cloud 🌥",
+      "image": "/images/line.png"
+    },
+    {
+      "id": 4,
+      "currentBid": 0.24,
+      "creators": "Jenny Wilson",
+      "title": "The mystery of the black square",
+      "image": "/images/cube.png"
+    },
+    {
+      "id": 5,
+      "currentBid": 0.24,
+      "creators": "Jenny Wilson",
+      "title": "The mystery of the black square",
+      "image": "/images/cube.png"
+    },
+    {
+      "id": 6,
+      "currentBid": 0.24,
+      "creators": "Jenny Wilson",
+      "title": "The mystery of the black square",
+      "image": "/images/cube.png"
     }
   ],
   "creators": [
@@ -54,7 +104,65 @@
       "id": 1,
       "fullName": "Tung Tran",
       "tags": "Bad Artist, NFT Enthusiast, Metaverse Innovator",
-      "followers": 3600
+      "followers": 3600,
+      "image": "/images/creator1.png",
+      "description": "Tung Tran is a visionary artist and NFT enthusiast, known for pushing the boundaries of digital art. With a passion for the metaverse, Tung creates immersive experiences that captivate audiences and redefine the art landscape. His work blends technology and creativity, making him a leading figure in the digital art community."
+    },
+    {
+      "id": 2,
+      "fullName": "Esther Howard",
+      "tags": "Digital Artist, 3D Modeler, Creative Innovator",
+      "followers": 2500,
+      "image": "/images/creator_2.png",
+      "description": "Esther Howard is a talented digital artist and 3D modeler, celebrated for her innovative approach to art. Her creations often explore the intersection of technology and creativity, resulting in stunning visual experiences. With a growing following, Esther continues to inspire and engage audiences with her unique artistic vision."
+    },
+    {
+      "id": 3,
+      "fullName": "Jenny Wilson",
+      "tags": "Visual Artist, NFT Creator, Art Visionary",
+      "followers": 1800,
+      "image": "/images/creator_3.png",
+      "description": "Jenny Wilson is a visionary visual artist and NFT creator, known for her captivating artworks that challenge conventional boundaries. Her work often reflects a deep understanding of the digital medium, making her a prominent figure in the NFT space. Jenny's art resonates with audiences, inviting them to explore new dimensions of creativity."
+    },
+    {
+      "id": 4,
+      "fullName": "Cameron Williamson",
+      "tags": "Digital Innovator, Art Enthusiast, Creative Leader",
+      "followers": 2200,
+      "image": "/images/creator_4.png",
+      "description": "Cameron Williamson is a digital innovator and art enthusiast, recognized for his leadership in the creative community. With a keen eye for detail and a passion for technology, Cameron's work bridges the gap between traditional art and digital innovation. His contributions continue to shape the future of art in the digital age."
+    },
+    {
+      "id": 5,
+      "fullName": "Darlene Robertson",
+      "tags": "Art Curator, NFT Advocate, Creative Visionary",
+      "followers": 3000,
+      "image": "/images/creator_5.png",
+      "description": "Darlene Robertson is an art curator and NFT advocate, dedicated to promoting innovative artists in the digital space. Her expertise in curating unique collections has made her a respected figure in the art community. Darlene's passion for creativity and technology drives her to discover and showcase emerging talents."
+    },
+    {
+      "id": 6,
+      "fullName": "Jane Cooper",
+      "tags": "Digital Artist, Creative Innovator, Art Enthusiast",
+      "followers": 2700,
+      "image": "/images/creator_6.png",
+      "description": "Jane Cooper is a digital artist and creative innovator, known for her unique approach to art that blends traditional techniques with modern technology. Her work captivates audiences with its intricate details and imaginative concepts. Jane's passion for art and innovation continues to inspire a new generation of artists."
+    },
+    {
+      "id": 7,
+      "fullName": "Jerome Bell",
+      "tags": "NFT Creator, Digital Visionary, Art Innovator",
+      "followers": 2900,
+      "image": "/images/creator_7.png",
+      "description": "Jerome Bell is a digital visionary and NFT creator, celebrated for his groundbreaking contributions to the art world. His innovative approach to digital art has garnered a significant following, making him a key player in the NFT community. Jerome's work challenges traditional art forms and invites audiences to explore new creative possibilities."
+    },
+    {
+      "id": 8,
+      "fullName": "Kathryn Murphy",
+      "tags": "Visual Artist, Creative Leader, Art Enthusiast",
+      "followers": 3100,
+      "image": "/images/creator_8.png",
+      "description": "Kathryn Murphy is a visual artist and creative leader, known for her impactful contributions to the art community. Her work often explores themes of identity and culture, resonating with diverse audiences. Kathryn's leadership in the creative space continues to inspire artists and art lovers alike."
     }
   ]
 }

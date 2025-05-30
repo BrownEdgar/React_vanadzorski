@@ -1,8 +1,10 @@
 .Navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   height: 96px;
+  & > .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
   nav {
     ul {
       list-style: none;

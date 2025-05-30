@@ -1,11 +1,21 @@
+import { Link } from 'react-router';
 import './Card.scss';
+import moment from 'moment';
 
-function Card({ elem }) {
+function Card({ elem, withDate }) {
+
   return (
     <article className="Card">
-      <img src={elem.image} alt="" className="Card__image" draggable={false} />
+      {withDate ? <div className="Card__date">
+
+        left
+        {' '}
+        {moment(elem.date).fromNow()}
+
+      </div> : null}
+      <img src={elem.image || null} alt="" className="Card__image" draggable={false} />
       <div className="Card__text">
-        <h2>{elem.title}</h2>
+        <Link to={`/actions/${elem.id}`}>{elem.title}</Link>
         <div className="devider"></div>
         <div className="Card__creators">
           <p>

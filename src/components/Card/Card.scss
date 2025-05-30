@@ -3,6 +3,7 @@
   height: 446px;
   border-radius: 18px;
   overflow: hidden;
+  position: relative;
   border: 1.5px solid #e6e6e6;
   &__image {
     height: 280px;
@@ -40,5 +41,16 @@
     &::after {
       content: ' ETH';
     }
+  }
+  &__date {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    color: #2c2c2e;
+    background-color: rgba($color: #fff, $alpha: 0.6);
+    font-weight: 600;
+    font-size: 14px;
+    border-radius: 30px;
+    padding: 10px 12px;
   }
 }
