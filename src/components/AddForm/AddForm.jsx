@@ -70,7 +70,7 @@ function AddForm() {
 
       {
         (formik) => {
-          console.log(formik)
+
           return (
             <Form>
               <Field type="text" name="username" placeholder='username' />

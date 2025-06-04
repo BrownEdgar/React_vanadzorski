@@ -1,0 +1,38 @@
+body {
+  max-width: 1200px;
+  background-color: #1a1a1a;
+  color: #fff;
+}
+
+.App {
+  margin: 120px auto;
+  border: 3px solid #2a2a2a;
+  border-radius: 12px;
+  width: 450px;
+  text-align: center;
+  padding: 1rem;
+}
+.buttons {
+  display: flex;
+
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-content: start;
+  margin-top: 40px;
+  &__item {
+    padding: 0.6rem 1rem;
+    cursor: pointer;
+    border: 0;
+    background-color: #4b4a4a;
+    color: #fff;
+    font-size: 18px;
+    &-active {
+      background-color: #03c129;
+    }
+  }
+}
+
+.stop {
+  color: #ff0002;
+}

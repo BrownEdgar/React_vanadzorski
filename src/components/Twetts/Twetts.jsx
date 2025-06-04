@@ -19,7 +19,7 @@ function Twetts() {
     dispatch(getAsyncTwetts())
   }, []);
 
-
+  console.log(twetts)
   if (twetts.loading) {
     return <h1>Loading....</h1>
   }
@@ -36,7 +36,7 @@ function Twetts() {
       </div>
       <AddForm />
       <div className="Twetts__blog">
-        {twetts.data.map(elem => {
+        {twetts && twetts?.data?.map(elem => {
           return (
             <div key={elem.id}>
               <div className="blog">
