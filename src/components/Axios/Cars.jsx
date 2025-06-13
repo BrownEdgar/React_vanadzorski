@@ -1,4 +1,4 @@
-import React from "react";
+
 import ArrowToRight from '../../Icons/ArrawIcon';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
